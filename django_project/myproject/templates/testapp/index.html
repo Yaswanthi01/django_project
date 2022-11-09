@@ -1,0 +1,33 @@
+<html>
+    <head>
+        home page
+    </head>
+</html>
+<body>
+    <div class = "container">
+        <table>
+
+            {% if queryset %}
+            {%for s in queryset %}
+
+            <tr>
+                <td><p>{{s.asset_id}} Information</p></td>
+                <td> <p>{{s.asset_name}}</p></td>
+                <td> <p>{{s.asset_stat}}</p></td>
+                <td> <p>{{s.route_id}}</p></td>
+                <td> <p>{{s.route_name}}</p></td>
+                <td> <p>{{s.asset_name}}</p></td>
+
+            </tr>
+
+            {%endfor%}
+            {%else%}
+
+            <p>Student Records Are Not Available</p>
+        {%endif%}
+
+        
+        </table>
+
+    </div>
+</body>
